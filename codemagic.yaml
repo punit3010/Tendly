@@ -1,0 +1,28 @@
+workflows:
+  tendly-android:
+    name: Tendly — Android Debug Build
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+    scripts:
+      - name: Set up Flutter project
+        script: |
+          cd tendly_zip
+          flutter create --project-name tendly --org com.tendly.app .
+          flutter pub get
+
+      - name: Build Android APK
+        script: |
+          cd tendly_zip
+          flutter build apk --debug
+
+    artifacts:
+      - tendly_zip/build/app/outputs/flutter-apk/app-debug.apk
+
+    publishing:
+      email:
+        recipients:
+          - punitjrt@gmail.com
+        notify:
+          success: true
+          failure: true
