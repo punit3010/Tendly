@@ -1,0 +1,57 @@
+name: tendly
+description: Tendly — your parenting companion. Grow together, every day.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Fonts
+  google_fonts: ^6.1.0
+
+  # Supabase — auth + database
+  supabase_flutter: ^2.3.0
+
+  # In-app subscriptions (RevenueCat)
+  purchases_flutter: ^6.25.0
+
+  # Google Sign In
+  google_sign_in: ^6.2.1
+
+  # Apple Sign In
+  sign_in_with_apple: ^6.1.0
+
+  # Shared preferences (local storage)
+  shared_preferences: ^2.2.2
+
+  # HTTP client
+  http: ^1.2.0
+
+  # Lottie animations (optional — for loading states)
+  lottie: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+
+  assets:
+    - assets/fonts/
+    - assets/images/
