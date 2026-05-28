@@ -11,10 +11,12 @@ workflows:
         script: |
           cd tendly_clean
           flutter create --project-name tendly --org com.tendly.app .
+          flutter pub upgrade
           flutter pub get
 
       - name: Inject API keys
         script: |
+          mkdir -p tendly_clean/lib/config
           cat > tendly_clean/lib/config/keys.dart << DART
           class AppKeys {
             static const claudeApiKey     = '$Claude_API_KEY';

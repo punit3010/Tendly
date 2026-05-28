@@ -1,5 +1,5 @@
 name: tendly
-description: Tendly — your parenting companion. Grow together, every day.
+description: Tendly — your parenting companion.
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
   google_fonts: ^6.1.0
   supabase_flutter: ^2.3.0
-  purchases_flutter: ^6.25.0
+  purchases_flutter: ^7.3.0
   google_sign_in: ^6.2.1
   sign_in_with_apple: ^6.1.0
   shared_preferences: ^2.2.2
