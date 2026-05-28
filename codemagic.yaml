@@ -29,9 +29,10 @@ workflows:
         script: |
           cd tendly_clean
           flutter build apk --debug
+          mv build/app/outputs/flutter-apk/app-debug.apk build/app/outputs/flutter-apk/Tendly.apk
 
     artifacts:
-      - tendly_clean/build/app/outputs/flutter-apk/app-debug.apk
+      - tendly_clean/build/app/outputs/flutter-apk/Tendly.apk
 
     publishing:
       email:
