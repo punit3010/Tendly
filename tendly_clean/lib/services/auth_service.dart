@@ -1,4 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../config/keys.dart';
 
 class AuthService {
   static final _sb = Supabase.instance.client;
@@ -6,7 +7,7 @@ class AuthService {
   static Future<void> initialize() async {
     await Supabase.initialize(
       url: 'https://cvhqfmlvusefrydbstyd.supabase.co',
-      anonKey: 'YOUR_SUPABASE_ANON_KEY',
+      anonKey: AppKeys.supabaseAnonKey,
     );
   }
 
@@ -18,6 +19,5 @@ class AuthService {
 
   static Future<void> signOut() => _sb.auth.signOut();
   static User? get currentUser => _sb.auth.currentUser;
-  static bool get isLoggedIn => currentUser != null;
-  static Stream<AuthState> get authStateChanges => _sb.auth.onAuthStateChange;
+  static bool get isLoggedIn   => currentUser != null;
 }
