@@ -1,0 +1,71 @@
+name: tendly
+description: Tendly — The family ritual OS
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Supabase
+  provider: ^6.1.2
+  supabase_flutter: ^2.5.0
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # State
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Fonts
+  google_fonts: ^6.2.1
+
+  # Storage
+  shared_preferences: ^2.2.3
+  flutter_secure_storage: ^9.0.0
+
+  # HTTP / AI
+  http: ^1.2.1
+
+  # UI utilities
+  cached_network_image: ^3.3.1
+  shimmer: ^3.0.0
+  flutter_svg: ^2.0.10+1
+  lottie: ^3.1.0
+
+  # Text to speech
+  flutter_tts: ^4.0.2
+
+  # In-app purchase (RevenueCat)
+  purchases_flutter: ^7.3.0
+
+  # Misc
+  intl: ^0.19.0
+  uuid: ^4.4.0
+  timeago: ^3.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  riverpod_generator: ^2.4.0
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+  fonts:
+    - family: Fraunces
+      fonts:
+        - asset: assets/fonts/Fraunces-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Fraunces-Italic.ttf
+            style: italic
