@@ -43,7 +43,7 @@ dependencies:
   flutter_tts: ^4.0.2
 
   # In-app purchase (RevenueCat)
-  purchases_flutter: ^7.3.0
+  purchases_flutter: ^6.29.0
 
   # Misc
   intl: ^0.19.0
