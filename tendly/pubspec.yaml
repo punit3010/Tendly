@@ -67,5 +67,5 @@ flutter:
       fonts:
         - asset: assets/fonts/Fraunces-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Fraunces-Italic.ttf
-            style: italic
+        - set: assets/fonts/Fraunces-Italic.ttf
+          style: italic
