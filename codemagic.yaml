@@ -9,11 +9,12 @@ workflows:
     scripts:
       - name: Get dependencies
         script: |
+          cd tendly
           flutter pub get
       - name: Inject API keys
         script: |
-          mkdir -p lib/config
-          cat > lib/config/keys.dart << DART
+          mkdir -p tendly/lib/config
+          cat > tendly/lib/config/keys.dart << DART
           class AppKeys {
             static const claudeApiKey     = '$Claude_API_KEY';
             static const supabaseAnonKey  = '$SUPABASE_ANON_KEY';
@@ -22,9 +23,10 @@ workflows:
           DART
       - name: Build Android APK
         script: |
+          cd tendly
           flutter build apk --debug
     artifacts:
-      - build/app/outputs/flutter-apk/app-debug.apk
+      - tendly/build/app/outputs/flutter-apk/app-debug.apk
     publishing:
       email:
         recipients:
