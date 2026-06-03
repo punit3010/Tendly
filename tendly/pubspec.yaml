@@ -62,10 +62,3 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
-  fonts:
-    - family: Fraunces
-      fonts:
-        - asset: assets/fonts/Fraunces-Regular.ttf
-          weight: 400
-        - set: assets/fonts/Fraunces-Italic.ttf
-          style: italic
