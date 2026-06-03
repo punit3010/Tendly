@@ -7,33 +7,24 @@ workflows:
       groups:
         - Tendly
     scripts:
-      - name: Set up Flutter project
+      - name: Get dependencies
         script: |
-          cd tendly_clean
-          flutter create --project-name tendly --org com.tendly.app .
-          flutter pub upgrade
           flutter pub get
-
       - name: Inject API keys
         script: |
-          mkdir -p tendly_clean/lib/config
-          cat > tendly_clean/lib/config/keys.dart << DART
+          mkdir -p lib/config
+          cat > lib/config/keys.dart << DART
           class AppKeys {
             static const claudeApiKey     = '$Claude_API_KEY';
             static const supabaseAnonKey  = '$SUPABASE_ANON_KEY';
             static const revenueCatGoogle = '$REVENUECAT_GOOGLE_KEY';
           }
           DART
-
       - name: Build Android APK
         script: |
-          cd tendly_clean
           flutter build apk --debug
-          mv build/app/outputs/flutter-apk/app-debug.apk build/app/outputs/flutter-apk/Tendly.apk
-
     artifacts:
-      - tendly_clean/build/app/outputs/flutter-apk/Tendly.apk
-
+      - build/app/outputs/flutter-apk/app-debug.apk
     publishing:
       email:
         recipients:
